@@ -113,3 +113,50 @@ window.addEventListener('resize', () => {
 
 init();
 animate();
+// Animate bars
+    function animateBars(cards) {
+        cards.forEach(card => {
+        const fill = card.querySelector('.bar-fill');
+        if (fill) {
+            fill.style.width = '0';
+            requestAnimationFrame(() => {
+            setTimeout(() => {
+                fill.style.width = fill.dataset.w + '%';
+            }, 50);
+            });
+        }
+        });
+    }
+
+    // Tab filtering
+    const tabs = document.querySelectorAll('.tab-btn');
+    const allCards = document.querySelectorAll('.skill-card');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const target = tab.dataset.tab;
+        const visible = [];
+
+        allCards.forEach(card => {
+            const group = card.dataset.group;
+            const show = target === 'all' || group === target;
+            card.style.display = show ? '' : 'none';
+            if (show) {
+            card.style.animationName = 'none';
+            card.style.animationDelay = (visible.length * 0.06) + 's';
+            requestAnimationFrame(() => {
+                card.style.animationName = 'fadeUp';
+            });
+            visible.push(card);
+            }
+        });
+
+        animateBars(visible);
+        });
+    });
+
+    // Initial bar animation
+    animateBars(document.querySelectorAll('.skill-card'));
