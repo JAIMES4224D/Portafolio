@@ -252,3 +252,72 @@ document.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight') lightboxNav(1);
     if (e.key === 'ArrowLeft') lightboxNav(-1);
 });
+
+// ===== NAVBAR =====
+const navbar = document.getElementById('navbar');
+const navToggle = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const navSections = document.querySelectorAll('section[id]');
+
+// Scroll: activar fondo del navbar + link activo
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+
+    // Detectar sección visible manualmente con IDs exactos del navbar
+    const sectionIds = ['about', 'projects', 'skills', 'gallery', 'contact'];
+    let current = '';
+
+    sectionIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const rect = el.getBoundingClientRect();
+        // La sección está activa si su parte superior ya pasó el navbar
+        if (rect.top <= 80) {
+            current = id;
+        }
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+});
+
+// Menú hamburguesa
+navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+});
+
+function closeMobileMenu() {
+    navToggle.classList.remove('open');
+    mobileMenu.classList.remove('open');
+}
+
+// ===== SCROLL A GALERÍA ESPECÍFICA =====
+function scrollToGallery(projectId) {
+    const idMap = {
+        'portfolio':  0,
+        'calc':       1,
+        'garage':     2,
+        'converter':  3,
+        'movies':     4,
+        'tele':       5,
+        'qr':         6,
+        'ecommerce':  7
+    };
+    const index = idMap[projectId];
+    const cards = document.querySelectorAll('.gallery-card');
+    const target = cards[index];
+    if (!target) return;
+
+    setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.style.transition = 'border-color 0.3s ease, box-shadow 0.3s ease';
+        target.style.borderColor = 'rgba(108, 99, 255, 0.9)';
+        target.style.boxShadow = '0 0 28px rgba(108, 99, 255, 0.4)';
+        setTimeout(() => {
+            target.style.borderColor = '';
+            target.style.boxShadow = '';
+        }, 2200);
+    }, 600);
+}
