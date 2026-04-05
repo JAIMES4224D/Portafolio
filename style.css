@@ -1124,3 +1124,183 @@ section {
 .lightbox-nav:hover { background: rgba(108,99,255,0.5); }
 .lightbox-nav.lb-prev { left: 24px; }
 .lightbox-nav.lb-next { right: 24px; }
+
+/* ==================== CONTACTO ==================== */
+#contact {
+    padding: 100px 5%;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-subtitle {
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+    font-size: 1.1rem;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 24px;
+    border-radius: 18px;
+    border: 1px solid rgba(0, 255, 255, 0.15);
+    background: rgba(15, 25, 35, 0.5);
+    backdrop-filter: blur(12px);
+    text-decoration: none;
+    transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    border-radius: 18px;
+}
+
+/* Colores por red */
+.contact-card.whatsapp { --accent: #25d366; }
+.contact-card.email    { --accent: #0ff; }
+.contact-card.linkedin { --accent: #0a66c2; }
+.contact-card.github   { --accent: #e6edf3; }
+
+.contact-card::before {
+    background: radial-gradient(circle at 0% 50%, rgba(var(--accent-rgb, 0,255,255), 0.08), transparent 70%);
+}
+
+.contact-card.whatsapp::before { background: radial-gradient(circle at 0% 50%, rgba(37,211,102,0.08), transparent 70%); }
+.contact-card.email::before    { background: radial-gradient(circle at 0% 50%, rgba(0,255,255,0.08), transparent 70%); }
+.contact-card.linkedin::before { background: radial-gradient(circle at 0% 50%, rgba(10,102,194,0.1), transparent 70%); }
+.contact-card.github::before   { background: radial-gradient(circle at 0% 50%, rgba(230,237,243,0.06), transparent 70%); }
+
+.contact-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+}
+
+.contact-card.whatsapp:hover { border-color: rgba(37,211,102,0.5); box-shadow: 0 16px 40px rgba(37,211,102,0.1); }
+.contact-card.email:hover    { border-color: rgba(0,255,255,0.5);  box-shadow: 0 16px 40px rgba(0,255,255,0.1); }
+.contact-card.linkedin:hover { border-color: rgba(10,102,194,0.6); box-shadow: 0 16px 40px rgba(10,102,194,0.15); }
+.contact-card.github:hover   { border-color: rgba(230,237,243,0.3);box-shadow: 0 16px 40px rgba(230,237,243,0.05); }
+
+.contact-card:hover::before { opacity: 1; }
+
+/* Ícono */
+.contact-icon-wrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon-wrap {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.contact-card.whatsapp .contact-icon-wrap { background: rgba(37,211,102,0.15); color: #25d366; }
+.contact-card.email    .contact-icon-wrap { background: rgba(0,255,255,0.12);   color: #0ff; }
+.contact-card.linkedin .contact-icon-wrap { background: rgba(10,102,194,0.2);   color: #4d94ff; }
+.contact-card.github   .contact-icon-wrap { background: rgba(255,255,255,0.08); color: #e6edf3; }
+
+/* Texto */
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+}
+
+.contact-value {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.9);
+    word-break: break-all;
+}
+
+/* Flecha */
+.contact-arrow {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.contact-card:hover .contact-arrow {
+    color: rgba(255,255,255,0.8);
+    transform: translateX(4px);
+}
+
+/* Disponibilidad */
+.contact-availability {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    background: rgba(0,255,100,0.06);
+    border: 1px solid rgba(0,255,100,0.2);
+    width: fit-content;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+
+.availability-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #00ff64;
+    box-shadow: 0 0 8px #00ff64;
+    animation: pulse-dot 2s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-card {
+        padding: 18px 20px;
+    }
+    .contact-value {
+        font-size: 0.85rem;
+    }
+    .contact-availability {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
