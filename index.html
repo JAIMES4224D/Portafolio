@@ -4,761 +4,823 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/foto.png" type="image/x-icon">
-    <title>DevPass | Jeferson Jaimes - Frontend Developer</title>
+    <title>DevPass Digital Solutions | Jeferson Jaimes — Systems Engineer & Founder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- CURSOR PERSONALIZADO -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- NAVBAR -->
     <nav id="navbar">
-        <div class="nav-logo">
-            <span class="logo-dev">Dev</span><span class="logo-pass">Pass</span>
+        <div class="nav-brand">
+            <span class="brand-dev">Dev</span><span class="brand-pass">Pass</span>
+            <span class="brand-tag">// Digital Solutions</span>
         </div>
         <ul class="nav-links">
-            <li><a href="#about">Sobre Mí</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#gallery">Galería</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#about"><span class="nav-num">01.</span> Perfil</a></li>
+            <li><a href="#projects"><span class="nav-num">02.</span> Proyectos</a></li>
+            <li><a href="#skills"><span class="nav-num">03.</span> Stack</a></li>
+            <li><a href="#gallery"><span class="nav-num">04.</span> Galería</a></li>
+            <li><a href="#contact"><span class="nav-num">05.</span> Contacto</a></li>
         </ul>
+        <a href="mailto:jaimespassunjeferson@gmail.com" class="nav-cta">Contrátame →</a>
         <button class="nav-toggle" id="navToggle">
             <span></span><span></span><span></span>
         </button>
     </nav>
     <div class="nav-mobile-menu" id="mobileMenu">
-        <a href="#about"    onclick="closeMobileMenu()">Sobre Mí</a>
-        <a href="#projects" onclick="closeMobileMenu()">Proyectos</a>
-        <a href="#skills"   onclick="closeMobileMenu()">Skills</a>
-        <a href="#gallery"  onclick="closeMobileMenu()">Galería</a>
-        <a href="#contact"  onclick="closeMobileMenu()">Contacto</a>
+        <a href="#about" onclick="closeMobileMenu()"><span>01.</span> Perfil</a>
+        <a href="#projects" onclick="closeMobileMenu()"><span>02.</span> Proyectos</a>
+        <a href="#skills" onclick="closeMobileMenu()"><span>03.</span> Stack</a>
+        <a href="#gallery" onclick="closeMobileMenu()"><span>04.</span> Galería</a>
+        <a href="#contact" onclick="closeMobileMenu()"><span>05.</span> Contacto</a>
+        <a href="mailto:jaimespassunjeferson@gmail.com" class="mobile-cta">Contrátame →</a>
     </div>
 
+    <!-- CANVAS FONDO -->
     <canvas id="universe"></canvas>
-    
+
+    <!-- TICKER DE ESTADO -->
+    <div class="status-ticker">
+        <div class="ticker-track">
+            <span>🟢 DISPONIBLE PARA PROYECTOS FREELANCE</span>
+            <span>⚡ FUNDADOR DE DEVPASS DIGITAL SOLUTIONS</span>
+            <span>🎓 INGENIERÍA DE SISTEMAS · 8VO CICLO · PERÚ</span>
+            <span>🚀 CONSTRUYENDO EL FUTURO TECNOLÓGICO</span>
+            <span>🟢 DISPONIBLE PARA PROYECTOS FREELANCE</span>
+            <span>⚡ FUNDADOR DE DEVPASS DIGITAL SOLUTIONS</span>
+            <span>🎓 INGENIERÍA DE SISTEMAS · 8VO CICLO · PERÚ</span>
+            <span>🚀 CONSTRUYENDO EL FUTURO TECNOLÓGICO</span>
+        </div>
+    </div>
+
+    <!-- HERO -->
     <section id="hero">
+        <div class="hero-grid-overlay"></div>
         <div class="hero-content">
-            <div class="profile-photo-container">
-                <img src="assets/img/fotoP.png" alt="Jeferson Jaimes" class="profile-photo">
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <div class="pulse-dot"></div>
+                    <span>Founder & Systems Engineer</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="title-line title-line--1">Jeferson</span>
+                    <span class="title-line title-line--2">Jaimes</span>
+                    <span class="title-line title-line--3 accent-line">Passuni.</span>
+                </h1>
+
+                <div class="hero-descriptor">
+                    <div class="descriptor-bar"></div>
+                    <p>Ingeniero de Sistemas con visión empresarial. <br>Construyo soluciones tecnológicas de alto impacto y escalo negocios digitales desde cero.</p>
+                </div>
+
+                <div class="hero-metrics">
+                    <div class="metric">
+                        <span class="metric-val">9+</span>
+                        <span class="metric-key">Proyectos</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric">
+                        <span class="metric-val">3+</span>
+                        <span class="metric-key">Años exp.</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric">
+                        <span class="metric-val">10+</span>
+                        <span class="metric-key">Clientes</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">Ver mi trabajo</a>
+                    <a href="#contact" class="btn-secondary">Hablemos →</a>
+                </div>
             </div>
 
-            <h1>Jeferson Jaimes Passuni</h1>
-            <h2>Ingeniero de Sistemas e Informática & Desarrollador</h2>
-            <p>Transformo ideas en experiencias digitales innovadoras</p>
-            <a href="#about" class="cta-button">Sobre Mi</a>
-            <a href="#projects" class="cta-button">Ver Proyectos</a>
-            <a href="#skills" class="cta-button">Tecnologías</a> 
-            <a href="#gallery" class="cta-button">Galería</a>
-            <a href="#contact" class="cta-button">Contacto</a>
+            <div class="hero-right">
+                <div class="photo-frame">
+                    <div class="photo-frame__inner">
+                        <img src="assets/img/fotoP.png" alt="Jeferson Jaimes" class="profile-photo">
+                    </div>
+                    <div class="photo-frame__border"></div>
+                    <div class="photo-tag photo-tag--1">
+                        <span class="tag-icon">⚡</span>
+                        <span>DevPass<br><small>Digital Solutions</small></span>
+                    </div>
+                    <div class="photo-tag photo-tag--2">
+                        <span class="tag-icon">🎯</span>
+                        <span>Full Stack<br><small>& Entrepreneur</small></span>
+                    </div>
+                </div>
+
+                <div class="tech-orbit">
+                    <span class="orbit-item orbit-item--1">Java</span>
+                    <span class="orbit-item orbit-item--2">Python</span>
+                    <span class="orbit-item orbit-item--3">ML/AI</span>
+                    <span class="orbit-item orbit-item--4">C#</span>
+                    <span class="orbit-item orbit-item--5">MySQL</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-hint">
+            <span class="mono">scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!--Sobre Mí--->
+    <!-- ABOUT -->
     <section id="about">
-        <div class="section-header">
-            <h2>Sobre Mí</h2>
-            <div class="section-line"></div>
+        <div class="section-label">
+            <span class="mono">// 01 — PERFIL</span>
         </div>
-        <div class="about-content">
-            <div class="about-image">
-                <div class="avatar">
-                    <span>👨‍💻</span>
+
+        <div class="about-layout">
+            <div class="about-headline">
+                <h2>No solo escribo código.<br><span class="text-accent">Construyo negocios.</span></h2>
+            </div>
+
+            <div class="about-body">
+                <div class="about-bio">
+                    <p>Soy Jeferson Jaimes Passuni — estudiante de Ingeniería de Sistemas e Informática (8vo ciclo, Perú) y fundador de <strong>DevPass Digital Solutions</strong>. Mi enfoque va más allá del desarrollo técnico: pienso en cada solución como un producto que debe generar valor real en el mercado.</p>
+                    <p>Con experiencia en desarrollo web, desktop y sistemas empresariales, combino ingeniería de alta calidad con mentalidad de founder para ejecutar proyectos que escalan.</p>
+
+                    <div class="bio-contact">
+                        <a href="mailto:jaimespassunjeferson@gmail.com" class="contact-inline">
+                            <span>✉</span> jaimespassunjeferson@gmail.com
+                        </a>
+                    </div>
+
+                    <div class="vision-block">
+                        <div class="vision-icon">🏗️</div>
+                        <div>
+                            <strong>Visión 2026-2030</strong>
+                            <p>Consolidar DevPass Digital Solutions como referente de desarrollo de software empresarial en Latinoamérica, mientras lidera proyectos de impacto con IA y automatización.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-num">9+</span>
+                        <span class="stat-label">Proyectos completados</span>
+                        <div class="stat-bar" style="--w: 90%"></div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">3+</span>
+                        <span class="stat-label">Años de experiencia</span>
+                        <div class="stat-bar" style="--w: 60%"></div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">10+</span>
+                        <span class="stat-label">Clientes satisfechos</span>
+                        <div class="stat-bar" style="--w: 80%"></div>
+                    </div>
+                    <div class="stat-card stat-card--highlight">
+                        <span class="stat-num">∞</span>
+                        <span class="stat-label">Ambición de crecimiento</span>
+                        <div class="stat-bar" style="--w: 100%"></div>
+                    </div>
                 </div>
             </div>
-            <div class="about-text">
-                <p style="text-align: justify;">Soy Jeferson Jaimes Passuni, estudiante de Ingeniería de Sistemas e Informática en Perú (8vo ciclo). Apasionado por la programación, tengo experiencia en HTML, CSS, JavaScript, Java con MySQL y JSP, y C# con SQL Server. He trabajado en proyectos de reservas, telemedicina y gestión de inventario, combinando teoría y práctica para crear soluciones útiles y eficientes.</p>
-                <p>📬 Contacto: jaimespassunjeferson@gmail.com</p>
-                <div class="about-stats">
-                    <div class="stat">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Proyectos Completados</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">3+</span>
-                        <span class="stat-label">Años de Experiencia</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Clientes Felices</span>
-                    </div>
-                </div>
+        </div>
+
+        <div class="pillars">
+            <div class="pillar">
+                <div class="pillar-icon">🔬</div>
+                <h4>Ingeniería</h4>
+                <p>Arquitecturas sólidas, código limpio y soluciones que perduran en el tiempo.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-icon">🚀</div>
+                <h4>Entrepreneurship</h4>
+                <p>Mentalidad de producto, escala y mercado en cada línea de código que escribo.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-icon">🤖</div>
+                <h4>Innovación</h4>
+                <p>IA, Machine Learning y automatización como palancas de impacto exponencial.</p>
             </div>
         </div>
     </section>
 
-
-     <!-- Proyectos Section -->
+    <!-- PROJECTS -->
     <section id="projects">
-        <div class="section-header">
-            <h2>Proyectos Destacados</h2>
-            <div class="section-line"></div>
+        <div class="section-label">
+            <span class="mono">// 02 — PROYECTOS DESTACADOS</span>
         </div>
+        <div class="section-header-row">
+            <h2>Lo que construyo.</h2>
+            <p class="section-sub">Soluciones reales para problemas reales.</p>
+        </div>
+
         <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-icon">🚀</div>
+
+            <div class="project-card project-card--featured">
+                <div class="card-header">
+                    <span class="card-num mono">001</span>
+                    <span class="card-badge">Web · Portfolio</span>
+                </div>
+                <div class="card-icon">🚀</div>
                 <h3>Mi Página Web Personal</h3>
-                <p>Portfolio personal desarrollado en HTML, CSS y JS, con animaciones y fondo interactivo. Muestra proyectos, skills y contacto.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML5</span>
-                    <span class="tech-tag">CSS3</span>
-                    <span class="tech-tag">JavaScript</span>
+                <p>Portfolio personal de alto impacto desarrollado con HTML, CSS y JS puro. Animaciones canvas, diseño interactivo y arquitectura modular lista para producción.</p>
+                <div class="card-tech">
+                    <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
                 </div>
-                <a target="_blank"  href="https://github.com/JAIMES4224D/Portafolio" class="project-link">Ver GitHub →</a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon">🧮</div>
-                <h3>Calculadora Cientifica</h3>
-                <p>Calculadora científica avanzada desarrollada en Python con interfaz gráfica moderna, que combina operaciones básicas con funciones matemáticas complejas en un diseño intuitivo.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Tkinter</span>
-                    <span class="tech-tag">Math</span>
+                <div class="card-footer">
+                    <a href="https://github.com/JAIMES4224D/Portafolio" target="_blank" class="card-link">GitHub →</a>
                 </div>
-                <a target="_blank" href="https://github.com/JAIMES4224D/CalculadoraPython" class="project-link">Ver GitHub →</a>
             </div>
+
             <div class="project-card">
-                <div class="project-icon">🚗</div>
+                <div class="card-header">
+                    <span class="card-num mono">002</span>
+                    <span class="card-badge">Desktop · Python</span>
+                </div>
+                <div class="card-icon">🧮</div>
+                <h3>Calculadora Científica</h3>
+                <p>Calculadora científica avanzada en Python con interfaz gráfica moderna. Combina operaciones básicas con funciones matemáticas complejas en diseño intuitivo.</p>
+                <div class="card-tech">
+                    <span>Python</span><span>Tkinter</span><span>Math</span>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/JAIMES4224D/CalculadoraPython" target="_blank" class="card-link">GitHub →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <span class="card-num mono">003</span>
+                    <span class="card-badge">Enterprise · Desktop</span>
+                </div>
+                <div class="card-icon">🚗</div>
                 <h3>Sistema de Estacionamiento</h3>
-                <p>SistemaGarage es una solución de escritorio desarrollada en C# con Windows Forms, diseñada para optimizar y automatizar la gestión completa de operaciones en garajes y estacionamientos.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">C#</span>
-                    <span class="tech-tag">Windows Forms</span>
-                    <span class="tech-tag">.NET Framework</span>
-                    <span class="tech-tag">SQL Server</span>
+                <p>Solución empresarial de escritorio en C# con Windows Forms para automatizar y optimizar la gestión completa de garajes y estacionamientos.</p>
+                <div class="card-tech">
+                    <span>C#</span><span>Windows Forms</span><span>.NET</span><span>SQL Server</span>
                 </div>
-                <a target="_blank" href="https://github.com/JAIMES4224D/Sistema-Garage-" class="project-link">Ver GitHub →</a>
+                <div class="card-footer">
+                    <a href="https://github.com/JAIMES4224D/Sistema-Garage-" target="_blank" class="card-link">GitHub →</a>
+                </div>
             </div>
+
             <div class="project-card">
-                <div class="project-icon">🎶</div>
+                <div class="card-header">
+                    <span class="card-num mono">004</span>
+                    <span class="card-badge">SaaS · Desktop</span>
+                </div>
+                <div class="card-icon">🎶</div>
                 <h3>DevPass Converter</h3>
-                <p>Herramienta de escritorio profesional de DEVPASS DIGITAL SOLUTIONS para descargar y convertir YouTube a MP3 en alta calidad (320 kbps), sin publicidad.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Tkinter</span>
-                    <span class="tech-tag">yt-dlp</span>
-                    <span class="tech-tag">FFmpeg</span>
-                    <span class="tech-tag">PyInstaller</span>
+                <p>Herramienta profesional de DEVPASS DIGITAL SOLUTIONS para convertir YouTube a MP3 en alta calidad (320 kbps), sin publicidad ni limitaciones.</p>
+                <div class="card-tech">
+                    <span>Python</span><span>Tkinter</span><span>yt-dlp</span><span>FFmpeg</span>
                 </div>
-                <a target="_blank" href="https://github.com/JAIMES4224D/Convertidor" class="project-link">Ver GitHub →</a>
+                <div class="card-footer">
+                    <a href="https://github.com/JAIMES4224D/Convertidor" target="_blank" class="card-link">GitHub →</a>
+                </div>
             </div>
-            <div class="project-card">
-                <div class="project-icon">🔌​📽️​</div>
+
+            <div class="project-card project-card--ai">
+                <div class="card-header">
+                    <span class="card-num mono">005</span>
+                    <span class="card-badge card-badge--ai">🤖 ML / AI</span>
+                </div>
+                <div class="card-icon">🎬</div>
                 <h3>Algoritmo de Recomendación de Películas</h3>
-                <p>Sistema de Machine Learning que recomienda películas según sus atributos usando NLP, sin depender de otros usuarios (evita cold start).</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Pandas</span>
-                    <span class="tech-tag">NumPy</span>
-                    <span class="tech-tag">Scikit-learn</span>
-                    <span class="tech-tag">Joblib</span>
-                    <span class="tech-tag">FastAPI / AWS EC2</span>
+                <p>Sistema de Machine Learning que recomienda películas mediante NLP y similitud de contenido. Evita cold start y escala en AWS EC2 vía FastAPI.</p>
+                <div class="card-tech">
+                    <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>FastAPI</span><span>AWS EC2</span>
                 </div>
-                <a target="_blank" href="https://github.com/JAIMES4224D/Algoritmo-de-Recomendaci-n-Peliculas-" class="project-link">Ver GitHub →</a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon">🏥💻​</div>
-                <h3> Sistema de Telemedicina</h3>
-                <p>Plataforma web de telemedicina que permite la conexión entre médicos y pacientes mediante videollamadas, chat y gestión de consultas médicas a distancia.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Java</span>
-                    <span class="tech-tag">Netbeans</span>
-                    <span class="tech-tag">MySQL</span>
-                    <span class="tech-tag">Java Swing</span>
-                    <span class="tech-tag">Desktop App</span>
+                <div class="card-footer">
+                    <a href="https://github.com/JAIMES4224D/Algoritmo-de-Recomendaci-n-Peliculas-" target="_blank" class="card-link">GitHub →</a>
                 </div>
-                <a target="_blank" href="https://github.com/JAIMES4224D/Telemedicina" class="project-link">Ver GitHub →</a>
             </div>
+
             <div class="project-card">
-                <div class="project-icon">✔️</tool_call><tool_call>𝄂𝄂𝄀𝄁</tool_call>𝄂𝄂</tool_call>​</div>
-                <h3> QR Master Pro</h3>
-                <p>Generador de QR multiplataforma con personalización avanzada de diseño y logos, previsualización en tiempo real y exportación profesional en alta resolución.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">qrcode</span>
-                    <span class="tech-tag">Pillow</span>
-                    <span class="tech-tag">tkinterdnd2</span>
+                <div class="card-header">
+                    <span class="card-num mono">006</span>
+                    <span class="card-badge">HealthTech · Desktop</span>
                 </div>
-                <a target="_blank" href="https://github.com/JAIMES4224D/QR-Master-Pro" class="project-link">Ver GitHub →</a>
+                <div class="card-icon">🏥</div>
+                <h3>Sistema de Telemedicina</h3>
+                <p>Plataforma que conecta médicos y pacientes mediante videollamadas, chat y gestión completa de consultas médicas a distancia.</p>
+                <div class="card-tech">
+                    <span>Java</span><span>Java Swing</span><span>MySQL</span><span>Netbeans</span>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/JAIMES4224D/Telemedicina" target="_blank" class="card-link">GitHub →</a>
+                </div>
             </div>
+
             <div class="project-card">
-                <div class="project-icon">🌐​</div>
+                <div class="card-header">
+                    <span class="card-num mono">007</span>
+                    <span class="card-badge">Tool · Desktop</span>
+                </div>
+                <div class="card-icon">✅</div>
+                <h3>QR Master Pro</h3>
+                <p>Generador de QR multiplataforma con personalización avanzada, logos, previsualización en tiempo real y exportación profesional en alta resolución.</p>
+                <div class="card-tech">
+                    <span>Python</span><span>qrcode</span><span>Pillow</span><span>tkinterdnd2</span>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/JAIMES4224D/QR-Master-Pro" target="_blank" class="card-link">GitHub →</a>
+                </div>
+            </div>
+
+            <div class="project-card project-card--featured">
+                <div class="card-header">
+                    <span class="card-num mono">008</span>
+                    <span class="card-badge card-badge--enterprise">Enterprise · E-Commerce</span>
+                </div>
+                <div class="card-icon">🌐</div>
                 <h3>Enterprise E-Commerce Solution</h3>
-                <p>Solución e-commerce integral que digitaliza el ciclo de ventas de DonGlai LED, uniendo un frontend responsivo con un backend administrativo robusto.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Java</span>
-                    <span class="tech-tag">MySQL</span>
-                    <span class="tech-tag">Bootstrap</span>
-                    <span class="tech-tag">JWT</span>
+                <p>Solución e-commerce integral que digitaliza el ciclo completo de ventas de DonGlai LED. Frontend responsivo + backend administrativo robusto con JWT.</p>
+                <div class="card-tech">
+                    <span>Java</span><span>MySQL</span><span>Bootstrap</span><span>JWT</span>
                 </div>
-                <a target="_blank" href="https://github.com/JAIMES4224D/Tienda_Web" class="project-link">Ver GitHub →</a>
+                <div class="card-footer">
+                    <a href="https://github.com/JAIMES4224D/Tienda_Web" target="_blank" class="card-link">GitHub →</a>
+                </div>
             </div>
+
             <div class="project-card">
-                <div class="project-icon">💾</div> 
+                <div class="card-header">
+                    <span class="card-num mono">009</span>
+                    <span class="card-badge">DevTool · DB</span>
+                </div>
+                <div class="card-icon">💾</div>
                 <h3>Generate-Script-SQL</h3>
-                <p>Aplicación de escritorio para la generación automatizada de scripts de bases de datos MySQL.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Tkinter</span>
-                    <span class="tech-tag">MySQL</span>
+                <p>Aplicación de escritorio para generación automatizada de scripts de bases de datos MySQL. Ahorra horas de trabajo repetitivo en entornos de desarrollo.</p>
+                <div class="card-tech">
+                    <span>Python</span><span>Tkinter</span><span>MySQL</span>
                 </div>
-                <a target="_blank" href="https://github.com/JAIMES4224D/Generate-Script-SQL" class="project-link">Ver GitHub →</a>
+                <div class="card-footer">
+                    <a href="https://github.com/JAIMES4224D/Generate-Script-SQL" target="_blank" class="card-link">GitHub →</a>
+                </div>
             </div>
+
         </div>
     </section>
-    <!--Skills Section -->
+
+    <!-- SKILLS -->
     <section id="skills">
-    <div class="skills-header">
-        <p class="label">// Tecnologías</p>
-        <h2>Stack Tecnológico</h2>
-        <div class="section-line"></div>
-    </div>
-
-    <!-- Tabs -->
-    <div class="tabs">
-        <button class="tab-btn active" data-tab="all">Todos</button>
-        <button class="tab-btn" data-tab="frontend">Frontend</button>
-        <button class="tab-btn" data-tab="backend">Backend</button>
-        <button class="tab-btn" data-tab="database">Database</button>
-    </div>
-
-    <!-- Grid -->
-    <div class="skills-grid" id="skillsGrid">
-
-        <!-- FRONTEND -->
-        <div class="skill-card" data-group="frontend">
-        <div class="card-top">
-            <div class="card-left">
-            <div class="skill-icon icon-html">🟠</div>
-            <div>
-                <div class="skill-name">HTML5</div>
-                <span class="level-badge level-expert">Expert</span>
-            </div>
-            </div>
-            <div class="skill-pct">90%</div>
+        <div class="section-label">
+            <span class="mono">// 03 — STACK TECNOLÓGICO</span>
         </div>
-        <div class="bar-track"><div class="bar-fill html" data-w="90"></div></div>
+        <div class="section-header-row">
+            <h2>Las herramientas del oficio.</h2>
         </div>
 
-        <div class="skill-card" data-group="frontend">
-        <div class="card-top">
-            <div class="card-left">
-            <div class="skill-icon icon-css">🔵</div>
-            <div>
-                <div class="skill-name">CSS3</div>
-                <span class="level-badge level-expert">Expert</span>
-            </div>
-            </div>
-            <div class="skill-pct">85%</div>
-        </div>
-        <div class="bar-track"><div class="bar-fill css" data-w="85"></div></div>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="all">Todos</button>
+            <button class="tab-btn" data-tab="frontend">Frontend</button>
+            <button class="tab-btn" data-tab="backend">Backend</button>
+            <button class="tab-btn" data-tab="database">Database</button>
         </div>
 
-        <div class="skill-card" data-group="frontend">
-        <div class="card-top">
-            <div class="card-left">
-            <div class="skill-icon icon-js">🟡</div>
-            <div>
-                <div class="skill-name">JavaScript</div>
-                <span class="level-badge level-advanced">Advanced</span>
+        <div class="skills-grid" id="skillsGrid">
+            <div class="skill-card" data-group="frontend">
+                <div class="card-top">
+                    <div class="card-left">
+                        <div class="skill-icon icon-html">🟠</div>
+                        <div>
+                            <div class="skill-name">HTML5</div>
+                            <span class="level-badge level-expert">Expert</span>
+                        </div>
+                    </div>
+                    <div class="skill-pct">90%</div>
+                </div>
+                <div class="bar-track"><div class="bar-fill html" data-w="90"></div></div>
             </div>
-            </div>
-            <div class="skill-pct">80%</div>
-        </div>
-        <div class="bar-track"><div class="bar-fill js" data-w="80"></div></div>
-        </div>
 
-        <div class="skill-card" data-group="frontend">
-        <div class="card-top">
-            <div class="card-left">
-            <div class="skill-icon icon-bootstrap">🟣</div>
-            <div>
-                <div class="skill-name">Bootstrap</div>
-                <span class="level-badge level-advanced">Advanced</span>
+            <div class="skill-card" data-group="frontend">
+                <div class="card-top">
+                    <div class="card-left">
+                        <div class="skill-icon icon-css">🔵</div>
+                        <div>
+                            <div class="skill-name">CSS3</div>
+                            <span class="level-badge level-expert">Expert</span>
+                        </div>
+                    </div>
+                    <div class="skill-pct">85%</div>
+                </div>
+                <div class="bar-track"><div class="bar-fill css" data-w="85"></div></div>
             </div>
-            </div>
-            <div class="skill-pct">75%</div>
-        </div>
-        <div class="bar-track"><div class="bar-fill bootstrap" data-w="75"></div></div>
-        </div>
 
-        <!-- BACKEND -->
-        <div class="skill-card" data-group="backend">
-        <div class="card-top">
-            <div class="card-left">
-            <div class="skill-icon icon-java">☕</div>
-            <div>
-                <div class="skill-name">Java</div>
-                <span class="level-badge level-advanced">Advanced</span>
+            <div class="skill-card" data-group="frontend">
+                <div class="card-top">
+                    <div class="card-left">
+                        <div class="skill-icon icon-js">🟡</div>
+                        <div>
+                            <div class="skill-name">JavaScript</div>
+                            <span class="level-badge level-advanced">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="skill-pct">80%</div>
+                </div>
+                <div class="bar-track"><div class="bar-fill js" data-w="80"></div></div>
             </div>
-            </div>
-            <div class="skill-pct">80%</div>
-        </div>
-        <div class="bar-track"><div class="bar-fill java" data-w="80"></div></div>
-        </div>
 
-        <div class="skill-card" data-group="backend">
-        <div class="card-top">
-            <div class="card-left">
-            <div class="skill-icon icon-python">🐍</div>
-            <div>
-                <div class="skill-name">Python</div>
-                <span class="level-badge level-mid">Mid</span>
+            <div class="skill-card" data-group="frontend">
+                <div class="card-top">
+                    <div class="card-left">
+                        <div class="skill-icon icon-bootstrap">🟣</div>
+                        <div>
+                            <div class="skill-name">Bootstrap</div>
+                            <span class="level-badge level-advanced">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="skill-pct">75%</div>
+                </div>
+                <div class="bar-track"><div class="bar-fill bootstrap" data-w="75"></div></div>
             </div>
-            </div>
-            <div class="skill-pct">65%</div>
-        </div>
-        <div class="bar-track"><div class="bar-fill python" data-w="65"></div></div>
-        </div>
 
-        <div class="skill-card" data-group="backend">
-        <div class="card-top">
-            <div class="card-left">
-            <div class="skill-icon icon-jsp">⚙️</div>
-            <div>
-                <div class="skill-name">JSP</div>
-                <span class="level-badge level-advanced">Advanced</span>
+            <div class="skill-card" data-group="backend">
+                <div class="card-top">
+                    <div class="card-left">
+                        <div class="skill-icon icon-java">☕</div>
+                        <div>
+                            <div class="skill-name">Java</div>
+                            <span class="level-badge level-advanced">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="skill-pct">80%</div>
+                </div>
+                <div class="bar-track"><div class="bar-fill java" data-w="80"></div></div>
             </div>
-            </div>
-            <div class="skill-pct">75%</div>
-        </div>
-        <div class="bar-track"><div class="bar-fill jsp" data-w="75"></div></div>
-        </div>
 
-        <div class="skill-card" data-group="backend">
-        <div class="card-top">
-            <div class="card-left">
-            <div class="skill-icon icon-spring">🌿</div>
-            <div>
-                <div class="skill-name">Spring</div>
-                <span class="level-badge level-mid">Mid</span>
+            <div class="skill-card" data-group="backend">
+                <div class="card-top">
+                    <div class="card-left">
+                        <div class="skill-icon icon-python">🐍</div>
+                        <div>
+                            <div class="skill-name">Python</div>
+                            <span class="level-badge level-mid">Mid</span>
+                        </div>
+                    </div>
+                    <div class="skill-pct">65%</div>
+                </div>
+                <div class="bar-track"><div class="bar-fill python" data-w="65"></div></div>
             </div>
-            </div>
-            <div class="skill-pct">50%</div>
-        </div>
-        <div class="bar-track"><div class="bar-fill spring" data-w="50"></div></div>
-        </div>
 
-        <div class="skill-card" data-group="backend">
-        <div class="card-top">
-            <div class="card-left">
-            <div class="skill-icon icon-csharp">🔷</div>
-            <div>
-                <div class="skill-name">C#</div>
-                <span class="level-badge level-mid">Mid</span>
+            <div class="skill-card" data-group="backend">
+                <div class="card-top">
+                    <div class="card-left">
+                        <div class="skill-icon icon-jsp">⚙️</div>
+                        <div>
+                            <div class="skill-name">JSP</div>
+                            <span class="level-badge level-advanced">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="skill-pct">75%</div>
+                </div>
+                <div class="bar-track"><div class="bar-fill jsp" data-w="75"></div></div>
             </div>
-            </div>
-            <div class="skill-pct">60%</div>
-        </div>
-        <div class="bar-track"><div class="bar-fill csharp" data-w="60"></div></div>
-        </div>
 
-        <!-- DATABASE -->
-        <div class="skill-card" data-group="database">
-        <div class="card-top">
-            <div class="card-left">
-            <div class="skill-icon icon-mysql">🐬</div>
-            <div>
-                <div class="skill-name">MySQL</div>
-                <span class="level-badge level-advanced">Advanced</span>
+            <div class="skill-card" data-group="backend">
+                <div class="card-top">
+                    <div class="card-left">
+                        <div class="skill-icon icon-spring">🌿</div>
+                        <div>
+                            <div class="skill-name">Spring</div>
+                            <span class="level-badge level-mid">Mid</span>
+                        </div>
+                    </div>
+                    <div class="skill-pct">50%</div>
+                </div>
+                <div class="bar-track"><div class="bar-fill spring" data-w="50"></div></div>
             </div>
-            </div>
-            <div class="skill-pct">80%</div>
-        </div>
-        <div class="bar-track"><div class="bar-fill mysql" data-w="80"></div></div>
-        </div>
 
-        <div class="skill-card" data-group="database">
-        <div class="card-top">
-            <div class="card-left">
-            <div class="skill-icon icon-sqlserver">🗄️</div>
-            <div>
-                <div class="skill-name">SQL Server</div>
-                <span class="level-badge level-advanced">Advanced</span>
+            <div class="skill-card" data-group="backend">
+                <div class="card-top">
+                    <div class="card-left">
+                        <div class="skill-icon icon-csharp">🔷</div>
+                        <div>
+                            <div class="skill-name">C#</div>
+                            <span class="level-badge level-mid">Mid</span>
+                        </div>
+                    </div>
+                    <div class="skill-pct">60%</div>
+                </div>
+                <div class="bar-track"><div class="bar-fill csharp" data-w="60"></div></div>
             </div>
-            </div>
-            <div class="skill-pct">75%</div>
-        </div>
-        <div class="bar-track"><div class="bar-fill sqlserver" data-w="75"></div></div>
-        </div>
 
-    </div><!-- /skills-grid -->
+            <div class="skill-card" data-group="database">
+                <div class="card-top">
+                    <div class="card-left">
+                        <div class="skill-icon icon-mysql">🐬</div>
+                        <div>
+                            <div class="skill-name">MySQL</div>
+                            <span class="level-badge level-advanced">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="skill-pct">80%</div>
+                </div>
+                <div class="bar-track"><div class="bar-fill mysql" data-w="80"></div></div>
+            </div>
+
+            <div class="skill-card" data-group="database">
+                <div class="card-top">
+                    <div class="card-left">
+                        <div class="skill-icon icon-sqlserver">🗄️</div>
+                        <div>
+                            <div class="skill-name">SQL Server</div>
+                            <span class="level-badge level-advanced">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="skill-pct">75%</div>
+                </div>
+                <div class="bar-track"><div class="bar-fill sqlserver" data-w="75"></div></div>
+            </div>
+        </div>
     </section>
-    
-    <!--Galería de Proyectos-->
+
+    <!-- GALLERY -->
     <section id="gallery">
-        <section id="portafolio">
-            <div class="gallery-header">
-                <h2>Galería de Proyectos</h2>
-                <div class="section-line"></div>
+        <div class="section-label">
+            <span class="mono">// 04 — GALERÍA DE PROYECTOS</span>
+        </div>
+        <div class="section-header-row">
+            <h2>En acción.</h2>
+            <p class="section-sub">Capturas reales de sistemas en producción.</p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-card">
+                <div class="carousel" data-project="Portafolio Web">
+                    <div class="carousel-track">
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/portfolio-1.jpeg" alt="Portafolio Web - Vista principal"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/portfolio-2.jpeg" alt="Portafolio Web - Skills"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/portfolio-3.jpeg" alt="Portafolio Web - Proyectos"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/portfolio-4.jpeg" alt="Portafolio Web - Contacto"></div>
+                    </div>
+                    <button class="carousel-btn prev">&#8249;</button>
+                    <button class="carousel-btn next">&#8250;</button>
+                    <div class="carousel-dots"></div>
+                    <div class="slide-counter"></div>
+                </div>
+                <div class="gallery-info">
+                    <h3>🚀 Portafolio Web Personal</h3>
+                    <a href="https://github.com/JAIMES4224D/Portafolio" target="_blank" class="gallery-link">GitHub →</a>
+                </div>
             </div>
-            <div class="gallery-grid">
 
-                <!-- PROYECTO 1: Portfolio Web -->
-                <div class="gallery-card">
-                    <div class="carousel" data-project="Portafolio Web">
-                        <div class="carousel-track">
-                            <!-- Reemplaza src con tus capturas reales -->
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/portfolio-1.jpeg" alt="Portafolio Web - Vista principal">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/portfolio-2.jpeg" alt="Portafolio Web - Sección skills">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/portfolio-3.jpeg" alt="Portafolio Web - Proyectos">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/portfolio-4.jpeg" alt="Portafolio Web - Proyectos">
-                            </div>
-                        </div>
-                        <button class="carousel-btn prev">&#8249;</button>
-                        <button class="carousel-btn next">&#8250;</button>
-                        <div class="carousel-dots"></div>
-                        <div class="slide-counter"></div>
+            <div class="gallery-card">
+                <div class="carousel" data-project="Calculadora Científica">
+                    <div class="carousel-track">
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/calculadora-1.png" alt="Calculadora Científica"></div>
                     </div>
-                    <div class="gallery-info">
-                        <h3>🚀 Mi Página Web Personal</h3>
-                        <a href="https://github.com/JAIMES4224D/Portafolio" target="_blank" class="gallery-link">Ver GitHub →</a>
-                    </div>
+                    <button class="carousel-btn prev">&#8249;</button>
+                    <button class="carousel-btn next">&#8250;</button>
+                    <div class="carousel-dots"></div>
+                    <div class="slide-counter"></div>
                 </div>
+                <div class="gallery-info">
+                    <h3>🧮 Calculadora Científica</h3>
+                    <a href="https://github.com/JAIMES4224D/CalculadoraPython" target="_blank" class="gallery-link">GitHub →</a>
+                </div>
+            </div>
 
-                <!-- PROYECTO 2: Calculadora -->
-                <div class="gallery-card">
-                    <div class="carousel" data-project="Calculadora Científica">
-                        <div class="carousel-track">
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/calculadora-1.png" alt="Calculadora Científica - Interfaz">
-                            </div>
-                        </div>
-                        <button class="carousel-btn prev">&#8249;</button>
-                        <button class="carousel-btn next">&#8250;</button>
-                        <div class="carousel-dots"></div>
-                        <div class="slide-counter"></div>
+            <div class="gallery-card">
+                <div class="carousel" data-project="Sistema Garage">
+                    <div class="carousel-track">
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/garage-1.jpeg" alt="Sistema Garage - Dashboard"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/garage-2.jpeg" alt="Sistema Garage - Registro"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/garage-3.jpeg" alt="Sistema Garage - Estadísticas"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/garage-4.jpeg" alt="Sistema Garage - Reportes"></div>
                     </div>
-                    <div class="gallery-info">
-                        <h3>🧮 Calculadora Científica</h3>
-                        <a href="https://github.com/JAIMES4224D/CalculadoraPython" target="_blank" class="gallery-link">Ver GitHub →</a>
-                    </div>
+                    <button class="carousel-btn prev">&#8249;</button>
+                    <button class="carousel-btn next">&#8250;</button>
+                    <div class="carousel-dots"></div>
+                    <div class="slide-counter"></div>
                 </div>
+                <div class="gallery-info">
+                    <h3>🚗 Sistema de Estacionamiento</h3>
+                    <a href="https://github.com/JAIMES4224D/Sistema-Garage-" target="_blank" class="gallery-link">GitHub →</a>
+                </div>
+            </div>
 
-                <!-- PROYECTO 3: Estacionamiento -->
-                <div class="gallery-card">
-                    <div class="carousel" data-project="Sistema Garage">
-                        <div class="carousel-track">
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/garage-1.jpeg" alt="Sistema Garage - Dashboard">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/garage-2.jpeg" alt="Sistema Garage - Registro">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/garage-3.jpeg" alt="Sistema Garage - Estadísticas">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/garage-4.jpeg" alt="Sistema Garage - Estadísticas">
-                            </div>
-                        </div>
-                        <button class="carousel-btn prev">&#8249;</button>
-                        <button class="carousel-btn next">&#8250;</button>
-                        <div class="carousel-dots"></div>
-                        <div class="slide-counter"></div>
+            <div class="gallery-card">
+                <div class="carousel" data-project="DevPass Converter">
+                    <div class="carousel-track">
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/conv-1.jpeg" alt="DevPass Converter"></div>
                     </div>
-                    <div class="gallery-info">
-                        <h3>🚗 Sistema de Estacionamiento</h3>
-                        <a href="https://github.com/JAIMES4224D/Sistema-Garage-" target="_blank" class="gallery-link">Ver GitHub →</a>
-                    </div>
+                    <button class="carousel-btn prev">&#8249;</button>
+                    <button class="carousel-btn next">&#8250;</button>
+                    <div class="carousel-dots"></div>
+                    <div class="slide-counter"></div>
                 </div>
+                <div class="gallery-info">
+                    <h3>🎶 DevPass Converter</h3>
+                    <a href="https://github.com/JAIMES4224D/Convertidor" target="_blank" class="gallery-link">GitHub →</a>
+                </div>
+            </div>
 
-                <!-- PROYECTO 4: DevPass Converter -->
-                <div class="gallery-card">
-                    <div class="carousel" data-project="DevPass Converter">
-                        <div class="carousel-track">
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/conv-1.jpeg" alt="DevPass Converter - Interfaz">
-                            </div>
-                        </div>
-                        <button class="carousel-btn prev">&#8249;</button>
-                        <button class="carousel-btn next">&#8250;</button>
-                        <div class="carousel-dots"></div>
-                        <div class="slide-counter"></div>
+            <div class="gallery-card">
+                <div class="carousel" data-project="Recomendación Películas">
+                    <div class="carousel-track">
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/movies-1.jpeg" alt="ML Recomendación Películas"></div>
                     </div>
-                    <div class="gallery-info">
-                        <h3>🎶 DevPass Converter</h3>
-                        <a href="https://github.com/JAIMES4224D/Convertidor" target="_blank" class="gallery-link">Ver GitHub →</a>
-                    </div>
+                    <button class="carousel-btn prev">&#8249;</button>
+                    <button class="carousel-btn next">&#8250;</button>
+                    <div class="carousel-dots"></div>
+                    <div class="slide-counter"></div>
                 </div>
+                <div class="gallery-info">
+                    <h3>🎬 Recomendación de Películas (ML)</h3>
+                    <a href="https://github.com/JAIMES4224D/Algoritmo-de-Recomendaci-n-Peliculas-" target="_blank" class="gallery-link">GitHub →</a>
+                </div>
+            </div>
 
-                <!-- PROYECTO 5: Recomendación Películas -->
-                <div class="gallery-card">
-                    <div class="carousel" data-project="Recomendación Películas">
-                        <div class="carousel-track">
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/movies-1.jpeg" alt="Recomendación Películas - API">
-                            </div>
-                        </div>
-                        <button class="carousel-btn prev">&#8249;</button>
-                        <button class="carousel-btn next">&#8250;</button>
-                        <div class="carousel-dots"></div>
-                        <div class="slide-counter"></div>
+            <div class="gallery-card">
+                <div class="carousel" data-project="Telemedicina">
+                    <div class="carousel-track">
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/tele-1.jpeg" alt="Telemedicina - Login"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/tele-2.jpeg" alt="Telemedicina - Consultas"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/tele-3.jpeg" alt="Telemedicina - Dashboard"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/tele-4.jpeg" alt="Telemedicina - Citas"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/tele-5.jpeg" alt="Telemedicina - Médicos"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/tele-6.jpeg" alt="Telemedicina - Reportes"></div>
                     </div>
-                    <div class="gallery-info">
-                        <h3>🎬 Recomendación de Películas</h3>
-                        <a href="https://github.com/JAIMES4224D/Algoritmo-de-Recomendaci-n-Peliculas-" target="_blank" class="gallery-link">Ver GitHub →</a>
-                    </div>
+                    <button class="carousel-btn prev">&#8249;</button>
+                    <button class="carousel-btn next">&#8250;</button>
+                    <div class="carousel-dots"></div>
+                    <div class="slide-counter"></div>
                 </div>
+                <div class="gallery-info">
+                    <h3>🏥 Sistema de Telemedicina</h3>
+                    <a href="https://github.com/JAIMES4224D/Telemedicina" target="_blank" class="gallery-link">GitHub →</a>
+                </div>
+            </div>
 
-                <!-- PROYECTO 6: Telemedicina -->
-                <div class="gallery-card">
-                    <div class="carousel" data-project="Telemedicina">
-                        <div class="carousel-track">
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/tele-1.jpeg" alt="Telemedicina - Login">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/tele-2.jpeg" alt="Telemedicina - Consultas">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/tele-2.jpeg" alt="Telemedicina - Consultas">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/tele-3.jpeg" alt="Telemedicina - Consultas">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/tele-4.jpeg" alt="Telemedicina - Consultas">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/tele-5.jpeg" alt="Telemedicina - Consultas">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/tele-6.jpeg" alt="Telemedicina - Consultas">
-                            </div>
-                        </div>
-                        <button class="carousel-btn prev">&#8249;</button>
-                        <button class="carousel-btn next">&#8250;</button>
-                        <div class="carousel-dots"></div>
-                        <div class="slide-counter"></div>
+            <div class="gallery-card">
+                <div class="carousel" data-project="QR Master Pro">
+                    <div class="carousel-track">
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/qr-1.jpeg" alt="QR Master Pro - Generador"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/qr-2.jpeg" alt="QR Master Pro - Personalización"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/qr-3.jpeg" alt="QR Master Pro - Exportación"></div>
                     </div>
-                    <div class="gallery-info">
-                        <h3>🏥 Sistema de Telemedicina</h3>
-                        <a href="https://github.com/JAIMES4224D/Telemedicina" target="_blank" class="gallery-link">Ver GitHub →</a>
-                    </div>
+                    <button class="carousel-btn prev">&#8249;</button>
+                    <button class="carousel-btn next">&#8250;</button>
+                    <div class="carousel-dots"></div>
+                    <div class="slide-counter"></div>
                 </div>
+                <div class="gallery-info">
+                    <h3>✅ QR Master Pro</h3>
+                    <a href="https://github.com/JAIMES4224D/QR-Master-Pro" target="_blank" class="gallery-link">GitHub →</a>
+                </div>
+            </div>
 
-                <!-- PROYECTO 7: QR Master Pro -->
-                <div class="gallery-card">
-                    <div class="carousel" data-project="QR Master Pro">
-                        <div class="carousel-track">
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/qr-1.jpeg" alt="QR Master Pro - Generador">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/qr-2.jpeg" alt="QR Master Pro - Personalización">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/qr-3.jpeg" alt="QR Master Pro - Personalización">
-                            </div>
-                        </div>
-                        <button class="carousel-btn prev">&#8249;</button>
-                        <button class="carousel-btn next">&#8250;</button>
-                        <div class="carousel-dots"></div>
-                        <div class="slide-counter"></div>
+            <div class="gallery-card gallery-card--wide">
+                <div class="carousel" data-project="Enterprise E-Commerce">
+                    <div class="carousel-track">
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-1.jpeg" alt="E-Commerce - Tienda"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-2.jpeg" alt="E-Commerce - Catálogo"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-3.jpeg" alt="E-Commerce - Admin"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-4.jpeg" alt="E-Commerce - Pedidos"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-5.jpeg" alt="E-Commerce - Checkout"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-6.jpeg" alt="E-Commerce - Dashboard"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-7.jpeg" alt="E-Commerce - Reportes"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-8.jpeg" alt="E-Commerce - Usuarios"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-9.jpeg" alt="E-Commerce - Stock"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-10.jpeg" alt="E-Commerce - Facturas"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-11.jpeg" alt="E-Commerce - Analytics"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-12.jpeg" alt="E-Commerce - Pagos"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-13.jpeg" alt="E-Commerce - Clientes"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-14.jpeg" alt="E-Commerce - Config"></div>
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/ecommerce-15.jpeg" alt="E-Commerce - Móvil"></div>
                     </div>
-                    <div class="gallery-info">
-                        <h3>✔️ QR Master Pro</h3>
-                        <a href="https://github.com/JAIMES4224D/QR-Master-Pro" target="_blank" class="gallery-link">Ver GitHub →</a>
-                    </div>
+                    <button class="carousel-btn prev">&#8249;</button>
+                    <button class="carousel-btn next">&#8250;</button>
+                    <div class="carousel-dots"></div>
+                    <div class="slide-counter"></div>
                 </div>
+                <div class="gallery-info">
+                    <h3>🌐 Enterprise E-Commerce Solution</h3>
+                    <a href="https://github.com/JAIMES4224D/Tienda_Web" target="_blank" class="gallery-link">GitHub →</a>
+                </div>
+            </div>
 
-                <!-- PROYECTO 8: E-Commerce -->
-                <div class="gallery-card">
-                    <div class="carousel" data-project="Enterprise E-Commerce">
-                        <div class="carousel-track">
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-1.jpeg" alt="E-Commerce - Tienda">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-2.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-3.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-4.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-5.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-6.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-7.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-8.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-9.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-10.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-11.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-12.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-13.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-14.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/ecommerce-15.jpeg" alt="E-Commerce - Admin">
-                            </div>
-                        </div>
-                        <button class="carousel-btn prev">&#8249;</button>
-                        <button class="carousel-btn next">&#8250;</button>
-                        <div class="carousel-dots"></div>
-                        <div class="slide-counter"></div>
+            <div class="gallery-card">
+                <div class="carousel" data-project="Generate Script SQL">
+                    <div class="carousel-track">
+                        <div class="carousel-slide" onclick="openLightbox(this)"><img src="assets/gallery/sql-1.jpeg" alt="Generate Script SQL"></div>
                     </div>
-                    <div class="gallery-info">
-                        <h3>🌐 Enterprise E-Commerce</h3>
-                        <a href="https://github.com/JAIMES4224D/Tienda_Web" target="_blank" class="gallery-link">Ver GitHub →</a>
-                    </div>
+                    <button class="carousel-btn prev">&#8249;</button>
+                    <button class="carousel-btn next">&#8250;</button>
+                    <div class="carousel-dots"></div>
+                    <div class="slide-counter"></div>
                 </div>
+                <div class="gallery-info">
+                    <h3>💾 Generate-Script-SQL</h3>
+                    <a href="https://github.com/JAIMES4224D/Generate-Script-SQL" target="_blank" class="gallery-link">GitHub →</a>
+                </div>
+            </div>
 
-                <div class="gallery-card">
-                    <div class="carousel" data-project="Generate Script SQL">
-                        <div class="carousel-track">
-                            <div class="carousel-slide" onclick="openLightbox(this)">
-                                <img src="assets/gallery/sql-1.jpeg" alt="Generate Script SQL - Interfaz">
-                            </div>
-                            </div>
-                        <button class="carousel-btn prev">&#8249;</button>
-                        <button class="carousel-btn next">&#8250;</button>
-                        <div class="carousel-dots"></div>
-                        <div class="slide-counter"></div>
-                    </div>
-                    <div class="gallery-info">
-                        <h3>💾 Generate-Script-SQL</h3>
-                        <a href="https://github.com/JAIMES4224D/Generate-Script-SQL" target="_blank" class="gallery-link">Ver GitHub →</a>
-                    </div>
-                </div>
-            </div><!-- /gallery-grid -->
-        </section>
+        </div>
     </section>
 
-    <!-- Lightbox -->
+    <!-- LIGHTBOX -->
     <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" onclick="closeLightbox()">&#10005;</button>
+        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
         <button class="lightbox-nav lb-prev" onclick="lightboxNav(-1)">&#8249;</button>
         <img id="lightbox-img" src="" alt="">
         <div class="lightbox-caption" id="lightbox-caption"></div>
         <button class="lightbox-nav lb-next" onclick="lightboxNav(1)">&#8250;</button>
     </div>
-    <!-- Contacto -->
+
+    <!-- CONTACT -->
     <section id="contact">
-        <div class="section-header">
-            <h2>Contáctame</h2>
-            <div class="section-line"></div>
+        <div class="section-label">
+            <span class="mono">// 05 — CONTACTO</span>
         </div>
-        <p class="contact-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+        <div class="contact-layout">
+            <div class="contact-left">
+                <h2>¿Tienes un proyecto<br>en mente?<br><span class="text-accent">Construyámoslo.</span></h2>
+                <p>Estoy disponible para proyectos freelance, colaboraciones empresariales y oportunidades laborales de alto impacto.</p>
 
-        <div class="contact-grid">
+                <div class="contact-availability">
+                    <span class="availability-dot"></span>
+                    <span>Disponible para nuevos proyectos · Perú & Remoto</span>
+                </div>
+            </div>
 
-            <!-- Tarjeta WhatsApp -->
-            <a href="https://wa.me/51931976361" target="_blank" class="contact-card whatsapp">
-                <div class="contact-icon-wrap">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.528 5.845L.057 23.571a.75.75 0 00.921.921l5.726-1.471A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.951-1.355l-.355-.211-3.676.944.962-3.584-.232-.369A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
-                    </svg>
-                </div>
-                <div class="contact-info">
-                    <span class="contact-label">WhatsApp</span>
-                    <span class="contact-value">+51 931 976 361</span>
-                </div>
-                <span class="contact-arrow">→</span>
-            </a>
+            <div class="contact-cards">
+                <a href="https://wa.me/51931976361" target="_blank" class="contact-card whatsapp">
+                    <div class="contact-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.528 5.845L.057 23.571a.75.75 0 00.921.921l5.726-1.471A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.951-1.355l-.355-.211-3.676.944.962-3.584-.232-.369A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">WhatsApp</span>
+                        <span class="contact-value">+51 931 976 361</span>
+                    </div>
+                    <span class="contact-arrow">→</span>
+                </a>
 
-            <!-- Tarjeta Email -->
-            <a href="mailto:jaimespassunjeferson@gmail.com" class="contact-card email">
-                <div class="contact-icon-wrap">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
-                        <rect x="2" y="4" width="20" height="16" rx="2"/>
-                        <path d="M2 7l10 7 10-7"/>
-                    </svg>
-                </div>
-                <div class="contact-info">
-                    <span class="contact-label">Correo Electrónico</span>
-                    <span class="contact-value">jaimespassunjeferson@gmail.com</span>
-                </div>
-                <span class="contact-arrow">→</span>
-            </a>
+                <a href="mailto:jaimespassunjeferson@gmail.com" class="contact-card email">
+                    <div class="contact-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">jaimespassunjeferson@gmail.com</span>
+                    </div>
+                    <span class="contact-arrow">→</span>
+                </a>
 
-            <!-- Tarjeta LinkedIn -->
-            <a href="https://linkedin.com/in/jeferson-jociney-jaimes-passuni-700a58236/" target="_blank" class="contact-card linkedin">
-                <div class="contact-icon-wrap">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                </div>
-                <div class="contact-info">
-                    <span class="contact-label">LinkedIn</span>
-                    <span class="contact-value">Jeferson Jaimes Passuni</span>
-                </div>
-                <span class="contact-arrow">→</span>
-            </a>
+                <a href="https://linkedin.com/in/jeferson-jociney-jaimes-passuni-700a58236/" target="_blank" class="contact-card linkedin">
+                    <div class="contact-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">Jeferson Jaimes Passuni</span>
+                    </div>
+                    <span class="contact-arrow">→</span>
+                </a>
 
-            <!-- Tarjeta GitHub -->
-            <a href="https://github.com/JAIMES4224D" target="_blank" class="contact-card github">
-                <div class="contact-icon-wrap">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                    </svg>
-                </div>
-                <div class="contact-info">
-                    <span class="contact-label">GitHub</span>
-                    <span class="contact-value">JAIMES4224D</span>
-                </div>
-                <span class="contact-arrow">→</span>
-            </a>
-
-        </div>
-
-        <!-- Mensaje de disponibilidad -->
-        <div class="contact-availability">
-            <span class="availability-dot"></span>
-            <span>Disponible para proyectos freelance y oportunidades laborales</span>
+                <a href="https://github.com/JAIMES4224D" target="_blank" class="contact-card github">
+                    <div class="contact-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">JAIMES4224D</span>
+                    </div>
+                    <span class="contact-arrow">→</span>
+                </a>
+            </div>
         </div>
     </section>
-    <script src="script.js"></script>
+
+    <!-- FOOTER -->
     <footer id="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <span class="logo-dev">Dev</span><span class="logo-pass">Pass</span>
-                <p>Transformando ideas en experiencias digitales</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="brand-dev">Dev</span><span class="brand-pass">Pass</span>
+                </div>
+                <p class="footer-tagline">Digital Solutions · Construyendo el futuro desde Perú</p>
             </div>
             <div class="footer-links">
-                <a href="https://github.com/JAIMES4224D" target="_blank">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                    GitHub
-                </a>
-                <a href="https://linkedin.com/in/jeferson-jociney-jaimes-passuni-700a58236/" target="_blank">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    LinkedIn
-                </a>
-                <a href="https://wa.me/51931976361" target="_blank">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.528 5.845L.057 23.571a.75.75 0 00.921.921l5.726-1.471A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.951-1.355l-.355-.211-3.676.944.962-3.584-.232-.369A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
-                    WhatsApp
-                </a>
+                <a href="https://github.com/JAIMES4224D" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/jeferson-jociney-jaimes-passuni-700a58236/" target="_blank">LinkedIn</a>
+                <a href="https://wa.me/51931976361" target="_blank">WhatsApp</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 <span class="logo-dev">Dev</span><span class="logo-pass">Pass</span> · Jeferson Jaimes Passuni · Hecho con 💙 en Perú</p>
+            <p class="mono">© 2026 DevPass Digital Solutions · Jeferson Jaimes Passuni · Hecho con precisión en Perú 🇵🇪</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
