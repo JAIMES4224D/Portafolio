@@ -90,10 +90,13 @@ canvas {
     margin-bottom: 60px;
 }
 
+/* CORRECCIÓN: Evita el estiramiento horizontal en títulos h2 generales */
 .section-header-row h2 {
     font-family: var(--display);
     font-size: clamp(2.2rem, 5vw, 3.5rem);
-    font-weight: 800;
+    font-weight: 700;
+    font-stretch: condensed;
+    letter-spacing: -0.02em;
     color: var(--text);
     line-height: 1.1;
     margin-bottom: 12px;
@@ -744,6 +747,8 @@ section {
     gap: 14px;
 }
 
+.text-accent { color: var(--accent); }
+
 .stat-card {
     padding: 22px;
     background: var(--bg3);
@@ -1031,6 +1036,7 @@ section {
     padding: 20px 22px;
     transition: all 0.3s ease;
     animation: fadeUp 0.5s ease both;
+    position: relative;
 }
 
 .skill-card:hover {
@@ -1049,7 +1055,6 @@ section {
     transition: opacity 0.3s;
 }
 
-.skill-card { position: relative; }
 .skill-card:hover::before { opacity: 1; }
 
 .card-top {
@@ -1358,15 +1363,18 @@ section {
 
 .contact-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr; /* CORRECCIÓN: Ajuste de proporciones para mayor estabilidad visual */
     gap: 80px;
     align-items: start;
 }
 
+/* CORRECCIÓN: Optimización de la fuente Syne para evitar el achatamiento horizontal */
 .contact-left h2 {
     font-family: var(--display);
     font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
+    font-weight: 700;
+    font-stretch: condensed;
+    letter-spacing: -0.02em;
     line-height: 1.15;
     color: var(--text);
     margin-bottom: 20px;
@@ -1587,7 +1595,7 @@ section {
     .projects-grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: 1fr; }
 
-    .contact-layout { gap: 40px; }
+    .contact-layout { grid-template-columns: 1fr; gap: 40px; }
 }
 
 @media (max-width: 480px) {
